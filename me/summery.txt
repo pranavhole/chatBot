@@ -1,0 +1,41 @@
+Pranav Hole
+§ pranavhole | ï pranav-hole |  pranavhole.space | # pranavhole02@gmail.com | H +91 85300 08525
+Summary
+Full-stack engineer with expertise in developing scalable backend services and real-time applications, strong experience in
+Node.js, cloud deployments (Azure), and database optimization. Proven track record of improving system performance
+by up to 74%, including reducing workflow execution time from 4.2s to 1.1s, leading migrations and building automation
+platforms. Passionate about clean coding, automation, and delivering impactful software solutions. Recently expanding
+skills in artificial intelligence and machine learning technologies.
+Work Experience
+System Engineer, Tata Consultancy Services Aug 2024 – Present
+– Designed and optimized backend services for high-volume stock market trade clearing in BFSI, ensuring reliability and
+low latency.
+– Used Node.js, PL/SQL, MySQL; deployed and monitored on Azure cloud.
+– Led migration of legacy clearing system to modern tech stack, improving trade settlement speed and system resilience.
+– Enhanced Risk Management System performance by 35% via caching strategies during peak hours.
+– Managed code reviews, deployment automation, and cross-team collaboration for smooth rollouts.
+Projects
+Muzzy — Music Streaming Platform Github — WebLink
+– Built with Next.js, Prisma ORM, PostgreSQL for seamless streaming.
+– Implemented sequential play, voting system, and real-time playback updates.
+– Leveraged Redis caching and WebSockets to reduce sync latency by 68%.
+– Designed responsive UI and scalable backend for multi-user interaction.
+Zapier Clone — Workflow Automation Github — WebLink
+– Created monorepo-based automation platform using Next.js, Node.js, Kafka.
+– Improved workflow execution speed by 74%, reducing execution from 4.2s to 1.1s via event-driven microservices.
+– Designed for extensibility with modular connectors and automation rules.
+Education
+2020 – 2024 Government College of Engineering, Amravati — B.Tech in Electrical Engineering
+CGPA: 7.56/10
+2018 – 2019 School of Scholars, Amravati — Class 12th
+79%
+Achievements
+Prajwalan’23 — Co-Coordinator
+– Organized and executed technical fest events, showcasing leadership and planning abilities.
+Google Developer Student Club, GCOEA — Co-Lead & Blockchain Lead July 2022 – July 2023
+– Mentored peers in blockchain initiatives, developing leadership and communication skills.
+Skills
+Programming C, C++, Java, JavaScript, Python, Typescript, Solidity
+Web Technologies HTML, CSS, Tailwind, Node.js, Express.js, React.js, Next.js, Flask, MongoDB, MySQL, Solidity, Hardhat, Ether.js, Kubernetes, Grafana, AWS, CI/CD, Docker, OpenAI SDK, Crew AI, MCP
+Tools Microsoft Azure, Cursor, Git & GitHub, Remix, Postman API
+Last updated: August 23, 2025
