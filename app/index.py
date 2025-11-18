@@ -17,7 +17,7 @@ app = FastAPI()
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://www.pranavhole.space/", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -26,32 +26,29 @@ app.add_middleware(
 # -------------------
 # Load LinkedIn PDF
 # -------------------
-linkedin = ""
+resume = ""
 try:
-    reader = PdfReader("me/linkdin.pdf")
+    reader = PdfReader("me/resume.pdf")
     for page in reader.pages:
         text = page.extract_text()
         if text:
-            linkedin += text
+            resume += text
 except Exception as e:
     print(f"Warning: could not read LinkedIn PDF: {e}")
-    linkedin = "LinkedIn profile not available"
+    resume = "Resume not available"
 
-github = "https://github.com/pranavhole"
-summary = linkedin
+summary = resume 
+linkedin = "https://www.linkedin.com/in/pranav-hole/"
 name = "Pranav Hole"
-
-system_prompt = f"""You are acting as {name}. You are answering questions on {name}'s website...
-
-## Summary:
-{summary}
-
-## LinkedIn Profile:
-{linkedin}
-
-## GitHub Profile:
-{github}
-
+system_prompt = f"You are acting as {name}. You are answering questions on {name}'s website, particularly questions related to {name}'s career, background, skills and experience. \
+Your responsibility is to represent {name} for interactions on the website as faithfully as possible. \
+You are given a summary of {name}'s background and LinkedIn profile which you can use to answer questions. \
+Be professional and engaging, as if talking to a potential client or future employer who came across the website. \
+If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. \
+If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool."
+system_prompt += f"\n\n## Resume:\n{summary}\n\n## LinkedIn Profile:\n{linkedin}\n\n Git hub Profile: https://github.com/pranavhole"
+system_prompt += f"With this context, please chat with the user, always staying in character as {name}."
+system_prompt += f"""
 Stay in character as {name}.
 """
 
@@ -180,10 +177,6 @@ async def index():
     </html>
     """
 
-
-# -------------------
-# Chat Endpoint (Streaming)
-# -------------------
 @app.post("/chat")
 async def chat(request: Request):
     print("Received chat request")
