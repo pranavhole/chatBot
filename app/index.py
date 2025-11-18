@@ -137,6 +137,7 @@ def handle_tool_calls(tool_calls):
 # -------------------
 @app.get("/", response_class=HTMLResponse)
 async def index():
+    print("Serving chat UI")
     return """
     <!doctype html>
     <html>
@@ -185,6 +186,7 @@ async def index():
 # -------------------
 @app.post("/chat")
 async def chat(request: Request):
+    print("Received chat request")
     data = await request.json()
     message = data.get("message")
     history = data.get("history", [])
